@@ -1,6 +1,8 @@
 
 import java.util.*;
-
+/*methods simulate a physical die, with as many faces as the method name specifies.
+ * 
+ */
 public class Dice {
 
 
