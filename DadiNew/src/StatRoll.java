@@ -1,7 +1,7 @@
 
 public class StatRoll {
 	int statRoll(){
-		Dices dado = new Dices();
+		Dice dado = new Dice();
 		int statValue = 0;
 		final int l1 = dado.tiraD6();
 		final int l2 = dado.tiraD6();

@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-public class Dadi {
-	public void dadi() {
-		Dices dado = new Dices();
+public class DieRoller {
+	public void dieRoller() {
+		Dice dado = new Dice();
 		int currentResult = 0;
 		int resultsPrinted = 0;
 		int diceNumber = 0;
@@ -10,7 +10,7 @@ public class Dadi {
 		String n = "si";
 		boolean done = false;
 		Scanner in = new Scanner(System.in);
-		
+			
 		while (n.equalsIgnoreCase("si")) {
 			System.out.println
 			("Che dado ti serve?");
@@ -25,7 +25,7 @@ public class Dadi {
 			System.out.println("Quanti tiri ti servono?");
 			done = false;
 
-			while (!done) {
+		while (!done) {
 				try {
 					String line = in.nextLine();
 					diceNumber = Integer.parseInt(line);
@@ -36,67 +36,57 @@ public class Dadi {
 					System.out.println("Inserisci un numero intero positivo");
 				}
 			}
-
 			for (int i = 1; i <= diceNumber; i++) {
-
 				if (dType.equalsIgnoreCase("d4")) {
 					currentResult = dado.tiraD4();
 					resultString = currentResult + "";
 					while (resultString.length() < 5) {
 						resultString = " " + resultString;
 					}
-
-					System.out.print(resultString + ";");
+						System.out.print(resultString + ";");
 				} else if (dType.equalsIgnoreCase("d6")) {
 					currentResult = dado.tiraD6();
 					resultString = currentResult + "";
 					while (resultString.length() < 5) {
 						resultString = " " + resultString;
 					}
-
-					System.out.print(resultString + ";");
+						System.out.print(resultString + ";");
 				} else if (dType.equalsIgnoreCase("d8")) {
 					currentResult = dado.tiraD8();
 					resultString = currentResult + "";
 					while (resultString.length() < 5) {
 						resultString = " " + resultString;
 					}
-
-					System.out.print(resultString + ";");
+						System.out.print(resultString + ";");
 				} else if (dType.equalsIgnoreCase("d10")) {
 					currentResult = dado.tiraD10();
 					resultString = currentResult + "";
 					while (resultString.length() < 5) {
 						resultString = " " + resultString;
 					}
-
-					System.out.print(resultString + ";");
+						System.out.print(resultString + ";");
 				}
-
 				else if (dType.equalsIgnoreCase("d12")) {
 					currentResult = dado.tiraD12();
 					resultString = currentResult + "";
 					while (resultString.length() < 5) {
 						resultString = " " + resultString;
 					}
-
-					System.out.print(resultString + ";");
+						System.out.print(resultString + ";");
 				} else if (dType.equalsIgnoreCase("d20")) {
 					currentResult = dado.tiraD20();
 					resultString = currentResult + "";
 					while (resultString.length() < 5) {
 						resultString = " " + resultString;
 					}
-
-					System.out.print(resultString + ";");
+						System.out.print(resultString + ";");
 				} else if (dType.equalsIgnoreCase("d100")) {
 					currentResult = dado.tiraD100();
 					resultString = currentResult + "";
 					while (resultString.length() < 5) {
 						resultString = " " + resultString;
 					}
-
-					System.out.print(resultString + ";");
+						System.out.print(resultString + ";");
 				} else if (dType.equalsIgnoreCase("dn")) {
 					System.out.println("Quante facce ha il dado?");
 					int facceDado = 0;
@@ -120,15 +110,16 @@ public class Dadi {
 						while (resultString.length() < 5) {
 							resultString = " " + resultString;
 						}
-
-						System.out.print(resultString + ";");
-						if (resultsPrinted % 10 == 0)
+							System.out.print(resultString + ";");
+						if (resultsPrinted % 10 == 0){
 							System.out.println();
+						}
 					}
 				}
 				resultsPrinted++;
-				if (resultsPrinted % 10 == 0)
+				if (resultsPrinted % 10 == 0){
 					System.out.println();
+				}
 			}
 			System.out.println();
 			System.out.println();

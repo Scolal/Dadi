@@ -1,8 +1,8 @@
-import java.util.Scanner;
+	import java.util.Scanner;
+public class Statistics {
 
-public class Caratteristiche {
-	public void caratteristiche() {
-		
+	public void statistics() {
+			
 		Scanner in = new Scanner(System.in);
 		StatPrinter printer = new StatPrinter();
 		int statQuantity = 0;
@@ -14,14 +14,13 @@ public class Caratteristiche {
 		
 		while (answer.equalsIgnoreCase("si")) {
 			System.out.print("Quanti personaggi devi fare?     ");
-
 			done = false;
 			while (!done) {
 				try {
 					String line = in.nextLine();
 					statQuantity = Integer.parseInt(line);
 					if (statQuantity < 0)
-						throw new NumberFormatException();
+					throw new NumberFormatException();
 					done = true;
 				} catch (NumberFormatException e) {
 					System.out.println("Inserisci un numero intero positivo");
@@ -29,20 +28,18 @@ public class Caratteristiche {
 			}
 
 			System.out.println();
-			System.out.println(
-					"Ok, ecco le caratteristiche, ho considerato solo i tiri sopra il 7, perche' sono buono...");
+			System.out.println("Ok, ecco le caratteristiche, ho considerato solo i tiri sopra il 7, perche' sono buono...");
 			System.out.println();
 
 			while (statQuantity>0){
-				
-				currentStatQuality=printer.statPrinter();
+					
+			currentStatQuality=printer.statPrinter();
 				if(currentStatQuality>106){
 					bestCounter++;
 				}
 				else if (currentStatQuality>92){
 					goodCounter++;
 				}
-					
 				
 				statQuantity--;
 			}

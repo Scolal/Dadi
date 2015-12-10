@@ -15,18 +15,18 @@ public class Start {
 			}
 
 			if(answer.equalsIgnoreCase("c") || answer.equalsIgnoreCase("caratteristiche")){
-				Caratteristiche car = new Caratteristiche();
-				car.caratteristiche();
+				Statistics stat = new Statistics();
+				stat.statistics();
 			}
 			
 			if(answer.equalsIgnoreCase("d") || answer.equalsIgnoreCase("dado") || answer.equalsIgnoreCase("dadi")){
-				Dadi dado = new Dadi();
-				dado.dadi();
+				DieRoller dice = new DieRoller();
+				dice.dieRoller();
 			}
 			
 			if(answer.equalsIgnoreCase("r") || answer.equalsIgnoreCase("raffiche") || answer.equalsIgnoreCase("raffica")){
-				Raffiche raffica = new Raffiche();
-				raffica.raffiche();
+				MultiHitRolls hits = new MultiHitRolls();
+				hits.multiHitRolls();
 			}
 
 			System.out.println("Ti serve altro?");
