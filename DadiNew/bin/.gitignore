@@ -1,3 +1,9 @@
-/.settings/
-/Raffiche.class
-/MultiHitRolls.class
+/MultiHitRoller.class
+/MultiHitRollerTest.class
+/Printer.class
+/Roll/
+/Roll.class
+/MultiRoller.class
+/MultiRollerTest.class
+/MultiRollPrinter.class
+/DiceRoller.class
