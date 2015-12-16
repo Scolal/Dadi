@@ -20,8 +20,8 @@ public class Start {
 			}
 			
 			if(answer.equalsIgnoreCase("d") || answer.equalsIgnoreCase("dado") || answer.equalsIgnoreCase("dadi")){
-				DieRoller dice = new DieRoller();
-				dice.dieRoller();
+				DiceRoller dice = new DiceRoller();
+				dice.diceRoller();
 			}
 			
 			if(answer.equalsIgnoreCase("r") || answer.equalsIgnoreCase("raffiche") || answer.equalsIgnoreCase("raffica")){

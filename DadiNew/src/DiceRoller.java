@@ -31,7 +31,7 @@ public class DiceRoller {
 					|| dType.equalsIgnoreCase("d10") || dType.equalsIgnoreCase("d12") || dType.equalsIgnoreCase("d20")
 					|| dType.equalsIgnoreCase("d100") || dType.equalsIgnoreCase("dn"))) {
 				// die selection cycle
-																							
+
 				System.out.println("Seleziona un tipo di dado (d4;d6;d8;d10;d12;d20;d100;dn)");
 				dType = in.next();
 			}
@@ -70,8 +70,12 @@ public class DiceRoller {
 			} else if (dType.equalsIgnoreCase("d100")) {
 				dieFaces = 100;
 			} else if (dType.equalsIgnoreCase("dn")) {
-				System.out.println("Quante facce ha il dado?");// in case of dn selection
-																// user must specify number of die sides
+				System.out.println("Quante facce ha il dado?");// in case of dn
+																// selection
+																// user must
+																// specify
+																// number of die
+																// sides
 				int facceDado = 0;
 				done = false;
 				while (!done) { // usual while and try-catch to avoid user
@@ -86,35 +90,37 @@ public class DiceRoller {
 						System.out.println("Inserisci un numero intero positivo");
 					}
 				}
+			}
 
-				rolls = roller.multiRoller(rollNumber, BONUS, MALUS, dieFaces);
+			rolls = roller.multiRoller(rollNumber, BONUS, MALUS, dieFaces);
 
-				for (int i=0; i <= rollNumber; i++) { 
-					resultsPrinted++;
-					resultString = rolls[i].getPure() + "";
-					while (resultString.length() < 5) {
-						resultString = " " + resultString;
-					}
-					System.out.print(resultString + ";");
-					if (resultsPrinted % 10 == 0) {
-						System.out.println();
-					}
+			for (int i = 0; i < rollNumber; i++) {
+				resultsPrinted++;
+				resultString = rolls[i].getPure() + "";
+				while (resultString.length() < 5) {
+					resultString = " " + resultString;
+				}
+				System.out.print(resultString + ";");
+				if (resultsPrinted % 10 == 0) {
+					System.out.println();
+				}
+
+				resultsPrinted++; // print resultString and formats
+				if (resultsPrinted % 10 == 0) {
+					System.out.println();
 				}
 			}
-			resultsPrinted++; // print resultString and formats
-			if (resultsPrinted % 10 == 0) {
-				System.out.println();
-			}
-		}
-		System.out.println();
-		System.out.println();
-		System.out.println("Ti servono altri tiri?"); // user can go back from
-														// beginning or exit
-		resultsPrinted = 0;
-		n = in.next();
-		while (!(n.equalsIgnoreCase("si") || n.equalsIgnoreCase("no"))) {
-			System.out.println("Rispondi solo si o no");
+			System.out.println();
+			System.out.println();
+			System.out.println("Ti servono altri tiri?"); // user can go back
+															// from
+															// beginning or exit
+			resultsPrinted = 0;
 			n = in.next();
+			while (!(n.equalsIgnoreCase("si") || n.equalsIgnoreCase("no"))) {
+				System.out.println("Rispondi solo si o no");
+				n = in.next();
+			}
 		}
 	}
 }
